@@ -94,7 +94,7 @@ function addBookToLibrary(){
     let book = new Book(titleInput, authorInput,pagesInput,readInput);
     myLibrary.push(book);
 
-    displayBook(titleInput, authorInput,pagesInput,readInput);
+    displayBook();
 }
 
 const form = document.querySelector(`.new-book`);
