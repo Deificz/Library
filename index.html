@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <section id="header">
+        <div class="logo">
+            <img class="img-logo" src="./Image/logo.png" alt="">
+            <h1>Mini Library<span> by Deificz</span></h1>
+        </div>
+        <div class="menu">
+            <button class="add-button">
+                <i class="fa-solid fa-circle-plus"></i>
+            </button>
+        </div>
+    </section>
+    <section id="main">
+        <dialog class="modal">
+                
+            <form class="new-book" action="" method="dialog">
+
+                <div class="row">
+                    <button class="close-button"><i class="fa-solid fa-circle-xmark"></i></button>
+                </div>
+
+                <div class="row">
+                    <label class="add-label" for="add-book">Add New Book</label>
+                </div>
+                
+                <div class="row">
+                    <label for="title">Title</label>
+                    <input id="title" name="title" type="text" placeholder="Imong Mama: Avengers" required autocapitalize="on">
+                </div>
+
+                <div class="row">
+                    <label for="author">Author</label>
+                    <input id="author" name="author" type="text" placeholder="Juan Dela Cruz" required autocapitalize="on" pattern="^[^0-9]+$">    
+                </div>
+
+                <div class="row">
+                    <label for="pages">Pages</label>
+                    <input id="pages" name="pages" type="number" placeholder="8" 
+                    required oninput="this.value =  !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
+                </div>
+                
+                <div class="row-radio">
+                
+                        <input type="radio" id="read" name="read" value="DONE" required>
+                        <label for="read">Read</label>
+                    
+                        <input type="radio" id="not-read" name="read" value="READ" required>
+                        <label for="read">Not Read</label>
+
+                </div>
+             
+                <div class="row">
+                    <button class="submit" type="submit"><i class="fa-solid fa-right-to-bracket"></i></button>
+                </div>
+                
+            </form>
+        </dialog>
+
+        <div class="list">
+            
+        </div>
+    </section>
+    
+</body>
+</html>
