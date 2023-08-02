@@ -28,23 +28,22 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3rem 10rem;
+    padding: 2rem;
     box-shadow: var(--dark-box-shadow);
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
-    
-    
+
 }
 .logo{
     display: grid;
-    grid-template-columns: 1.1fr 1fr;
+    grid-template-columns: .6fr 1fr;
     align-items: center;
     justify-items: center;
     
 }
 
 .img-logo{
-    height: 10rem;
+    height: 5rem;
     width: auto;
 }
 
@@ -61,7 +60,7 @@ h1 span{
    
 }
 .add-button > i {
-    font-size: 7em;
+    font-size: 5em;
     color: var(--black-font);
 }
 
