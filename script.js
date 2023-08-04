@@ -2,7 +2,6 @@ window.addEventListener('load', function() {
     View.displayBook();
 });
 
-
 const View = (() => {
     const displayBook = () => {
         //Reset the input fields
@@ -64,6 +63,7 @@ const View = (() => {
 const Model = (() => {
     let myLibrary;
 
+    //Check if the library exists in local storage
     if(`myLibrary` in localStorage){
         const storedLibraryJSON = localStorage.getItem('myLibrary');
         const storedLibrary = JSON.parse(storedLibraryJSON);
@@ -80,6 +80,7 @@ const Model = (() => {
         this.read = read;
     }
 
+    //Push the book ot the library
     const addBook = () => {
         const titleInput = document.getElementById(`title`).value;
         const authorInput = document.getElementById(`author`).value;
@@ -132,6 +133,7 @@ const Controller = (() => {
     const closeModal = document.querySelector(`.close-button`);
     const modal = document.querySelector(`.modal`);
 
+    //handle Submit
     form.addEventListener(`submit`, (event) => {
         event.preventDefault();
         Model.addBook();
@@ -139,7 +141,7 @@ const Controller = (() => {
         modal.close();
     });
 
-    
+    //handle Modal pop-ups
     openModal.addEventListener(`click`, () => {
         modal.show();
     })
