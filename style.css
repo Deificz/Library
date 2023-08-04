@@ -212,7 +212,7 @@ input[type="radio"][name=read]:checked {
     font-weight: bolder;
 }
 
-.card > .remove{
+.card > .btnRemove{
     background: none;
     border: none;
     cursor: pointer;
