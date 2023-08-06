@@ -20,14 +20,15 @@ const View = (() => {
             let inputAuthor = document.createElement(`p`);
             let inputPages = document.createElement(`p`);
             let inputRead = document.createElement(`button`);
+            inputRead.classList.add(`switch${i}`);
             inputRead.classList.add(`btnSwitch`);
             
             
             const btnRemove = document.createElement(`button`);
-            btnRemove.classList.add(`btnRemove`);
             btnRemove.classList.add(`fa-regular`);
             btnRemove.classList.add(`fa-trash-can`);
-            
+            btnRemove.classList.add(`remove${i}`);
+            btnRemove.classList.add(`btnRemove`);
 
             inputTitle.textContent = book.title;
             inputAuthor.textContent = book.author;
@@ -44,11 +45,11 @@ const View = (() => {
             card.appendChild(inputRead);
             card.appendChild(btnRemove);
 
-            document.querySelector(`.btnSwitch`).addEventListener(`click`,()=>{
+            document.querySelector(`.switch${i}`).addEventListener(`click`,()=>{
                 Model.switchRead(i);
                 Model.saveLibrary();
             });
-            document.querySelector(`.btnRemove`).addEventListener(`click`,()=>{
+            document.querySelector(`.remove${i}`).addEventListener(`click`,()=>{
                 Model.removeBook(i);
                 Model.saveLibrary();
             });
