@@ -7,3 +7,5 @@ Tech stack used:
   -  CSS
   -  Vanilla JavaScript
   -  localStorage
+
+**Live preview:** https://deificz.github.io/Mini-Library/
