@@ -8,4 +8,6 @@ Tech stack used:
   -  Vanilla JavaScript
   -  localStorage
 
+Available for Desktop only
+
 **Live preview:** https://deificz.github.io/Mini-Library/
