@@ -1,4 +1,4 @@
-# Library
+# Mini Library
 
 A web based mini-library wherein you can store list of books that you have already read or going to be read. 
 
@@ -7,7 +7,5 @@ Tech stack used:
   -  CSS
   -  Vanilla JavaScript
   -  localStorage
-
-Available for Desktop only
 
 **Live preview:** https://deificz.github.io/Mini-Library/
